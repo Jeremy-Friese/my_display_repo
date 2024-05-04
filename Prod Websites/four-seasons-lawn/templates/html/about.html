@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+{% load static %}
+{% load webp %}
+      {% block body_block %}
+      <style>
+      ul li{
+       font-size: 150%;
+      }
+    </style>
+      <link rel="stylesheet" type="text/css" href="{% static "about.css" %}">
+      <style>
+      {% if request.user_agent.is_mobile %}
+            #extender {
+              text-align: center;
+              width: 100%;
+              height: 100%;
+            }
+            .mike-container {
+              height: auto;
+              width: auto;
+              background: #4CAF50;
+            }
+        {% elif request.user_agent.is_pc %}
+            #extender {
+              text-align: center;
+              width: 100%;
+              height: 100%;
+            }
+            .mike-container {
+              display: inline-block;
+              width: 50%;
+              background: #4CAF50;
+            }
+        {% endif %}
+        </style>
+      <div class="parallax-window" id="extender" style="text-align: center;" data-parallax="scroll" data-image-src="{% webp "palm-tree-care.jpg" %}">
+            <br><br>
+        <div class="About" >
+            <h1 style="color:white;">Four Seasons Lawn Care</h1>
+            <br>
+            <img id="FourSeasonsPic" src="{%  webp "myfourseasonslawn.png" %}">
+            <br>
+            <h2 style="color:#FFB600;">About Us</h2>
+        </div>
+    <div class="mike-container">
+    <div class="mike">
+
+      <br>
+      <b><p>Being a Florida native, Michael had the opportunity to start learning about landscaping in this region at a young age.
+        Not only does Michael have a knack for caring for each and every client's landscaping, but in addition, Michael has a wealth of
+        knowledge and experience that he has gained while being in the industry for more than 25 years.</p>
+        <p>In order to meet the state licensing <strong><u>requirements</strong></u> to perform pest control services, Michael worked under an apprentice for 6 years.
+          After this, Michael passed a state exam and the state's Department of Agriculture and Consumer Services awarded him the title
+          of "Certified Pest Control Operator."<p>
+        <p>When he’s not taking care of the Tampa areas best-looking lawns, Michael enjoys spending time with his wife
+           and children, traveling, being an active member of his church, cruising, tending to his
+          vegetable garden and bowling.</p></b>
+  </div>
+  </div>
+  </div>
+
+{% if request.user_agent.is_mobile %}
+    <div style="height: 30%;">
+    </div>
+    <link rel="stylesheet" type="text/css" href="{% static "footerMobile.css" %}">
+    {% include "footerMobile.html" %}
+{% elif request.user_agent.is_pc %}
+    <link rel="stylesheet" type="text/css" href="{% static "footerPC.css" %}">
+    {% include "footerPC.html" %}
+{% endif %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{%static "parallax.js" %}"></script>
+  <script src="{%static "bootstrap.js" %}"></script>
+  {% endblock %}

@@ -1,0 +1,8 @@
+Django==2.2
+django-speedinfo==2.0.1
+django-user-agents==0.4.0
+cryptography==2.8
+pycryptodome==3.9.7
+Pillow==7.0.0
+django-webp==1.0.11
+stripe==2.47.0

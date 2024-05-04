@@ -1,0 +1,49 @@
+{% load static %}
+{% load webp %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="robots" content="index,follow">
+    <meta charset="utf-8">
+    <meta name="description" content="Beautiful lawn service in Wesely Chapel." />
+    <meta name="keywords" content="Lawn Services"/>
+    <meta property="og:title" content="Lawn Services in Wesley Chapel, Green Grass, Pest Control, " />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://myfourseasonslawn.com" />
+    <meta property="og:image" content="{%static "Lawn-Care-Wesley-Chapel.png" %}" />
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
+    <link rel="apple-touch-icon" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+    <link rel="apple-touch-icon-precomposed" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+    <link rel="mask-icon" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+</head>
+  <title>Four Seasons Lawn Service</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="{% static "bootstrap.min.js" %}"></script>
+  <link rel="stylesheet" href="{% static "bootstrap.min.css" %}"></link>
+  <nav class="navbar navbar-fixed-top navbar-inverse bg-primary navbar-toggleable-md">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex">
+        <a class="navbar-brand" href="#">Brand</a>
+        <span class="navbar-text"><i class="fa fa-lg fa-tree"></i></span>
+    </div>
+    <div class="navbar-collapse collapse" id="navbarNav">
+        <ul class="navbar-nav flex-row ml-auto justify-content-between">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+        </ul>
+    </div>
+</nav>
+    {% block body_block %}
+
+    {% endblock %}
+</body>
+</html>

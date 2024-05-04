@@ -1,0 +1,87 @@
+{% load staticfiles %}
+{% load webp %}
+<style>
+.containerII {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+<div style="text-align:center; width: 100%; height: 100%;" class="parallax-window" data-parallax="scroll" data-image-src="{% webp "wesley-chapel-green-grass.jpg" %}">
+  <div class="container">
+<form id="contact" action="contact" method="post">
+  {% csrf_token %}
+  <h3>Get Your Quote Today</h3>
+  <h4>Contact us for custom quote</h4>
+    <fieldset>
+    <input id="your_name" placeholder="Your Name" type="text" name="your_name" value="{{ current_name }}">
+    </fieldset>
+    <fieldset>
+      <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required value="{{ current_name }}">
+    </fieldset>
+    <fieldset>
+      <input name="number" placeholder="Your Phone Number" type="tel" tabindex="3" required value="{{ current_name }}">
+    </fieldset>
+    <fieldset>
+      <textarea name="message" placeholder="Type your message here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+</form>
+
+<style>
+  .facebook {
+    text-align: center;
+  }
+  .facebook img {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+<div class="facebook">
+  <a href="https://www.facebook.com/WesleyChapelLawnCare" target="_blank"><img style="width:15%;" src="{% webp "facebook.png" %}"></a>
+  <a href="https://www.facebook.com/WesleyChapelLawnCare" target="_blank"><p style="color:white; font: 20%;"><u>Like us on Facebook</u></p></a>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer" id="footer">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="footerLogo">
+                    <img src="{%  webp "Lawn-Care-Wesley-Chapel.png" %}">
+                    <a  href="{% url "terms"  %}">Terms and Conditions  |  </a>
+                    <a href="{% url "privacy"  %}">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3 col-sm-2 col-xs-3">
+                    <h3> Contact </h3>
+                    <ul>
+                        <li><a href="tel:+1-813-681-1640">813-681-1640</a></li>
+                        <br/>
+                        <li><a href="mailto:mwhite@myfourseasonslawn.com?Subject=New20%Services">mwhite@myfourseasonslawn.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-2 col-xs-3">
+                    <ul>
+                        <li> <h5> <a href="{% url "about"  %}" style="margin-top: 5em"> ABOUT US</a> <h5></li>
+                        <li> <h5><a href="{% url "services"  %}"> OUR SERVICES </a> <h5></li>
+                        <!--<li> <h5><a href="#"> BOOK A CONSULTATION </a> <h5></li>
+                        <li> <h5><a href="#"> WHY US </a> <h5></li>-->
+                    </ul>
+                </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left copyright"> Copyright © Four Seasons Lawn Care 2020. All right reserved. </p>
+
+        </div>
+    </div>
+</footer>

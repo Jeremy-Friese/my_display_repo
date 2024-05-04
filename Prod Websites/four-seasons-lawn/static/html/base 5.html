@@ -1,0 +1,58 @@
+{% load static %}
+{% load webp %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="robots" content="index,follow">
+    <meta charset="utf-8">
+    <meta name="description" content="Beautiful lawn service in Wesely Chapel." />
+    <meta name="keywords" content="Lawn Services"/>
+    <meta property="og:title" content="Lawn Services in Wesley Chapel, Green Grass, Pest Control, " />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://myfourseasonslawn.com" />
+    <meta property="og:image" content="{%static "Lawn-Care-Wesley-Chapel.png" %}" />
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
+    <link rel="apple-touch-icon" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+    <link rel="apple-touch-icon-precomposed" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+    <link rel="mask-icon" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+</head>
+  <title>Four Seasons Lawn Service</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="{% static "bootstrap.min.js" %}"></script>
+  <link rel="stylesheet" href="{% static "bootstrap.min.css" %}"></link>
+  <nav class="navbar navbar-expand fixed-top navbar-light bg-primary">
+    <a href="{% url "main"  %}"class="navbar-brand">
+        <img src="{% webp "lawn-Care.png"  %}" height="28" alt="My Four Seansons Lawn">
+    </a>
+       <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       Send Payment Button-->
+       <button class="btn btn-success ml-auto mr-1">Always Show</button>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+       <div class="collapse navbar-collapse" id="navbarsExample02">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+             <li class="nav-item active">
+               <a class="nav-link" href="{% url "main"  %}">Home <span class="sr-only">(current)</span></a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="{% url "about"  %}">About</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="{% url "services"  %}">Services</a>
+             </li>
+         </ul>
+       </div>
+     </nav>
+    {% block body_block %}
+
+    {% endblock %}
+</body>
+</html>

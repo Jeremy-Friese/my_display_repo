@@ -1,0 +1,150 @@
+
+
+<!-- <div class="main" [ngStyle]="{backgroundImage: 'url('+ family +')'}">
+    <img class="topImage" *ngIf="mobile" style="width: 55%; padding-bottom: 35rem;" [src]="topPic" alt="On The Morrow Travels">
+    <img class="topImage" *ngIf="!mobile" style="width: 25%; padding-bottom: 30rem;" [src]="topPic" alt="On The Morrow Travels">
+</div> -->
+<div class="header-content">
+    <div class="header-top animate-right">
+        <br><br>
+        <h1 class="animate-right title"><b>On The Morrow Travels</b></h1>
+        <img class="topImage2" *ngIf="mobile" style="width: 55%;" [src]="topPic"
+            alt="On The Morrow Travels">
+        <img class="topImage2" *ngIf="!mobile" style="width: 20%;" [src]="topPic"
+            alt="On The Morrow Travels">
+        <span class="animate-left">
+            <br><br><br><br>
+        <p class="animate-left">Congratulations!</p>
+            <p class="animate-left">You have decided to book your family vacation! What fun! We know how overwhelming the
+            process can be.</p>
+            <p class="animate-left">Managing what you may need for your family, where to go, and what to do on your vacation where all family
+            members will have a good time.</p>
+        </span>
+    </div>
+</div>
+<div class="tempMain">
+    <video class="vid" [muted]="'muted'" autoplay="autoplay" loop="loop" playsinline>
+        <source [src]="video" type="video/mp4">
+    </video>
+</div>
+<div class="container" *ngIf="wide" [innerHtml]="spacer">
+    <p>wide screen</p>
+</div>
+<div class="blockContainer">
+    <div class="container">
+        <br><br>
+        <div class="square1"></div>
+        <div class="descText"> 
+            <p>
+                Why not entrust On The Morrow Travels with curating your ideal getaway? While you manage your day-to-day lives, allow On The Morrow Travels to
+                weave together a vacation tailored to your must-haves. Whether it’s the grandparents or the youngest children, On The Morrow Travels 
+                will guide you toward experiences that belong in your cherished treasure box of memories.
+            </p>
+            <br><br><br>
+        </div>
+    </div>
+    <div class="container">
+        <h1><b>Like what? you may ask…</b></h1>
+        <br><br>
+    </div>
+    <div class="container">
+        <div class="square2"></div>
+        <br><br><br>
+        <div class="descText">
+            <p>
+                How about Embarking on a Disney Cruise Line voyage, it is like stepping into a magical world where every passenger finds
+                their own slice of enchantment.</p>
+            <p>
+                From lively Comedy Clubs to the whimsical It’s a Small World Nursery, and the
+                captivating Oceaneers Lab and Oceaneers Club, there’s an activity or experience for everyone.</p>
+            <p>
+                For the young adventurers, there’s Vibe and Edge, where friendships are forged and memories made. Meanwhile, cinephiles
+                can catch their favorite flicks in the ship’s cozy movie theaters, and theater enthusiasts can revel in the grandeur of
+                the Walt Disney Theater.
+            </p>
+        </div>
+        <br><br>
+    </div>
+    <div class="container">
+        <a routerLink="disney-cruise"><img id="disney-cruise" [@fadeIn]="isVisible ? 'in' : 'out'" #imageElement [src]="img2" alt="Disney Cruise Lines"></a>
+        <p [@fadeIn]="isVisible ? 'in' : 'out'" #imageElement>
+            And if relaxation is your goal, indulge in the soothing spa treatments or challenge yourself with a game on Goofy’s
+            Sports Deck.</p>
+        <p [@fadeIn]="isVisible ? 'in' : 'out'" #imageElement>
+            The options are boundless—whether you choose to immerse yourself in the excitement or simply savor the
+            tranquility of the open sea.</p>
+        <p [@fadeIn]="isVisible ? 'in' : 'out'" #imageElement>
+            Remember, aboard a Disney cruise, the world is your oyster, and you can do as much—or as little—as your heart desires!
+        </p>
+        <br><br><br><br><br>
+
+    </div>
+    <div class="container">
+        <div style="display: inline-block;">
+            <br><br><br><br><br>
+            <p class="textBox">
+                Don’t overlook the enchanting themed nights, like <span style="color: brown;"><b>Pirate Night</b></span>, the captivating sailings for <b><span style="color: red;">Marvel's </span> <span style="color: white;">Day</span></b> at
+                <b><span style="color: blue;">Sea</span></b>,
+                <b><span style="color: orange;">Halloween</span></b> on the <b><span style="color: green;">High</span> <span style="color: purple;">Seas</span></b>, and <b><span style="color: pink;">Very </span> <span style="color: lightgreen;">Merrytime</span> <span style="color: whitesmoke;">Cruises</span></b>.</p> 
+            <p>
+                No matter the occasion, there’s always something extraordinary waiting for you!
+            </p>
+            <br><br><br><br>
+        </div>
+        <div style="display: inline-block; vertical-align: bottom;">
+            <p-carousel [value]="images" [autoplayInterval]="2500">
+                <ng-template let-images pTemplate="item">
+                    <div class="product-item">
+                        <div class="product-item-content">
+                            <img [src]="images.previewImageSrc" [alt]="images.alt" [title]="images.title">
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div class="section dark" title="Disney travel planner">
+            <h2 style="color: #FF4081">On The Morrow Travels</h2>
+            <h3 style="color: #FF4081">Embark on Unforgettable Journeys with On The Morrow Travels - Where Every Trip Is a
+                Treasure.</h3>
+            <div style="text-align: center;">
+                <h3 style="color: #58c3e0;">
+                    <a href="tel:8179147119">Call</a> now to book your Disney Dream vacation!!
+                </h3>
+                <h3 style="color: #58c3e0;">
+                    Or click the button at the bottom of your screen to schedule a live call.
+                </h3>
+                <h3 style="color: #58c3e0;">
+                    Don't feel like talking on the phone, shoot us a <a
+                        href="sms:8179147119&body=Hi Gennie.  Can you tell me more about the Disney Cruise Lines Packages?">Text</a>,
+                    or <a
+                        href="mailto:jeremy@thefriese.com? &subject=Interested%20In%20The%20Disney%20Cruise%20Lines%20Packages&body=Hi%20Gennie,%0D%0A%0D%0A%0D%0AI%20would%20like%20more%20info%20on%20Disney%20Cruise%20Lines%20Packages">
+                        Email</a>.
+                </h3>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+    <br><br>
+</div>
+
+<div class="secondContainer" alt="All of your Disney Travel needs." style="margin-bottom: 5rem;">
+    <br><br>
+  <div class="item"><a [routerLink]="['disney']">
+      <div class="img img-first" [ngStyle]="{backgroundImage: 'url('+ img1 + ')'}"  alt="Explore Disney Packages"></div>
+      <div class="card">
+          <h3>Walt Disney Parks and Resorts</h3>
+          <p>Explore Packages</p>
+      </div>
+    </a>
+  </div>
+    <div class="item"><a [routerLink]="['disney-cruise']">
+            <div class="img img-first" [ngStyle]="{backgroundImage: 'url('+ img2 + ')'}" alt="Disney Cruise Package."></div>
+            <div class="card">
+                <h3>Disney Cruise Line</h3>
+                <p>Explore Cruise Packages</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<app-footer></app-footer>

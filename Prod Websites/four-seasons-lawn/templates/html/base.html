@@ -1,0 +1,66 @@
+{% load static %}
+{% load webp %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="robots" content="index,follow">
+    <meta charset="utf-8">
+    <meta name="description" content="Beautiful lawn service in Wesely Chapel." />
+    <meta name="keywords" content="Lawn Services"/>
+    <meta property="og:title" content="Lawn Services in Wesley Chapel, Green Grass, Pest Control, " />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://myfourseasonslawn.com" />
+    <meta property="og:image" content="{%static "Lawn-Care-Wesley-Chapel.png" %}" />
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
+    <link rel="apple-touch-icon" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+    <link rel="apple-touch-icon-precomposed" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+    <link rel="mask-icon" href="{% static 'favicon/apple-touch-icon.ico' %}"/>
+</head>
+  <title>Four Seasons Lawn Service</title>
+  <link rel="stylesheet" href="{% static "bootstrap.min.css" %}"></link>
+  <!--<link rel="stylesheet" type="text/css" href="{% static "base.css" %}">-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-primary justify-content-end">
+    <a href="{% url "main"  %}"class="navbar-brand">
+        <img src="{% webp "lawn-Care.png"  %}" height="28" alt="My Four Seansons Lawn">
+    </a>
+    {% if request.user_agent.is_mobile %}
+        <button class="navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      {% elif request.user_agent.is_pc %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      {% endif %}
+
+    <span class="navbar-toggler-icon"></span>
+  </button>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+             <li class="nav-item active">
+               <a class="nav-link" href="{% url "main"  %}">Home <span class="sr-only">(current)</span></a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="{% url "about"  %}">About</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="{% url "services"  %}">Services</a>
+             </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Payments
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+               <button class="btn btn-success ml-auto mr-1" style="color: white;"><a class="nav-link" href="{% url "payment"  %}">Send Payment</a></button>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+             </button>
+             </div>
+             </li>
+         </ul>
+       </div>
+     </nav>
+    {% block body_block %}
+
+    {% endblock %}
+</body>
+</html>

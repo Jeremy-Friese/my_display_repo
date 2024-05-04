@@ -1,0 +1,82 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta name="msvalidate.01" content="298CB0A6B328BCEB8D2D69C889C2B75A" />
+  <meta name="viewport" content="width=device-width, intial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="robots" content="index,follow">
+  <meta charset="utf-8">
+  <meta name="description" content="Beautiful home for sale in Haslet, Texas" />
+  <meta name="keywords" content="House for sale, house for sale fort worth, beautiful house for sale, house for sale 76052, house for sale 76052, 76052, haslet, fort worth, house for sale, real estate, real estate haslet, real estate haslet texas, real estate texas, real estate for sale, estate real, for sale, homes for sale, 76052 real estate, 76052 homes, 76052 homes for sale, houses, homes, buy homes for sale, buy homes, homes for sale, house for sale, sales homes, home sales,"/>
+  <meta property="og:title" content="536 Pollyann Trail" />
+  <meta property="og:url" content="http://536Pollyann.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{%static "pdl23tp.jpg" %}" />
+  <link rel="stylesheet" href="{% static "bootstrap.min.css" %}">
+  <title>536 Pollyann Trail</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140833360-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-140833360-1');
+  </script>
+<script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous">
+</script>
+<script src="{% static "bootstrap.min.js" %}"></script>
+</head>
+  <body>
+    <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" rel="canonical" href="{% url "home"  %}">536 Pollyann Trail</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#"><span class="sr-only"></span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore This Beautiful Home<span class="caret"></span></a>
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a href="https://my.matterport.com/models/vfJZgz9iRbU?section=media&mediasection=showcase" target="_blank">Take a Virtual Tour </a></li>
+                  <li><a href="{% url "pictures"  %}">View Pictures</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu"><a href="#" tabindex="-1"> Ammenities and Location</a>
+                    <ul class="dropdown-menu multi-level">
+                      <li><a href="{% url "ammenities"  %}">Sendera Ranch Ammenities</a></li>
+                      <li><a href="{% url "location"  %}">Location </a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://www.rebdgroup.com/homes/536-Pollyann-Trail/Fort-Worth/TX/76052/94589219/" target="_blank">Visit Agent Listing and Contact</a></li>
+                  </ul>
+                </li>
+              </li>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    {% block body_block %}
+
+    {% endblock %}
+</div>
+</body>
+</html>

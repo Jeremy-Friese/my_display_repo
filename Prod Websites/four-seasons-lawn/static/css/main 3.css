@@ -1,0 +1,290 @@
+html, body {
+  height: 100%;
+}
+
+.as {
+  text-align: center;
+}
+
+.greenlawns {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+
+button{
+    background-color: #000000;
+    color: white;
+    border-color:green;
+    height:50px;
+    width:200px;
+    margin: -20px -50px;
+    position:relative;
+}
+
+#screenText {
+    font-size: 30px;
+    font-size: 3.5vw;
+}
+
+.row {
+    position: relative;
+    /*padding-bottom: 56.25%;*/
+    height: 100%;
+}
+
+#phoneNumber {
+  color: white;
+  font-size: 30px;
+  font-size: 4.5vw;
+}
+
+.column {
+  float: right;
+  width: 40.33%;
+  padding: 5px;
+}
+
+#FourSeasonsPic {
+   width: 60%;
+   float: left;
+   height: auto;
+}
+
+#FourSeasonsVid {
+  float:right;
+  position: absolute;
+  padding-left: 55px;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+
+#Email {
+  text-align: center;
+}
+
+#textSyler{
+  background-color:white;
+  color:black;
+  width: 19em;
+  height: 1.5em;
+  font-size : 15px;
+  font-weight: bold;
+}
+
+#welcome{
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  background: #669900;
+  display: block;
+}
+
+.certified {
+    text-align: center;
+    background-color: #1d1e21;
+    position:relative;
+}
+
+.certified img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width:33.333%;
+}
+
+.column2 {
+  float: left;
+  width: 18.33%;
+  padding: 44px;
+}
+
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-top: 5px;
+  margin-left: 500px;
+}
+row {
+  width: 100%;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-top: 5px;
+  margin-left: 8px;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('glyphicons-halflings-regular.eot');
+  src: url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('glyphicons-halflings-regular.woff2') format('woff2'), url('glyphicons-halflings-regular.woff') format('woff'), url('glyphicons-halflings-regular.ttf') format('truetype'), url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.carousel-inner > .carousel-item > img {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+}
+
+.header{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  padding-bottom: 45px;
+  top: 100px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+
+.container {
+  top: 20%;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  padding-top: 300px;
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}

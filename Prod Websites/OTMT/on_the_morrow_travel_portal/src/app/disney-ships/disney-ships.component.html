@@ -1,0 +1,5 @@
+<div class="mainContainer">
+<iframe id="iframe" src="https://www.disneytravelcenter.com/ec80321342/" style="width:100%;border:none;height: 100%;"></iframe>
+<script> window.onmessage = (e) => { if (e.data.hasOwnProperty("frameHeight")) { document.getElementById("iframe").style.height = `${e.data.frameHeight + 30}px`; } }; </script>
+</div>
+<app-footer></app-footer>

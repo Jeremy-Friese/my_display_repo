@@ -1,0 +1,105 @@
+<div class="parallax-image1 sticky page-title" [ngStyle]="{backgroundImage: 'url('+ parallaxImage1 +')'}"
+title="Disney Vacation packages">
+    <img class="topImage" *ngIf="mobile" style="width: 65%;" [src]="topPic" alt="Bit Bounty Bay">
+    <img class="topImage" *ngIf="!mobile" style="width: 25%;" [src]="topPic" alt="Bit Bounty Bay">
+</div>
+<div class="section-header page-title" title="Disney travel agency">
+  <div class="header-text">
+    <h1>On The Morrorw Travels</h1>
+    <h3>Where Every Trip Is a Treasure.</h3>
+  </div>
+</div>
+<div class="section" [ngStyle]="{backgroundImage: 'url('+ epcot +')'}" title="Disney park tickets">
+  <!-- <mat-slide-toggle color="sith" (click)="onToggle()"></mat-slide-toggle> -->
+    <div class="item" title="Disney World vacation planner">
+        <div class="img img-second" [ngStyle]="{backgroundImage: 'url('+ img2 +')'}" title="Disney vacation"></div>
+        <div class="card" title="Affordable Disney vacation">
+            <h3>Explore the Parks Like Never Before!</h3>
+            <p>Expert Travel Agents That Know the Parks.</p>
+            <!-- <a href="#">Learn more</a> -->
+        </div>
+    </div>
+</div>
+<div class="parallax-image2 sticky" [ngStyle]="{backgroundImage: 'url('+ parallaxImage2+')'}" title="Disney group packages">
+</div>
+<div class="section-header2" title="Disney group travel">
+  <div class="header-text2" title="Disney group tickets">
+    <h2 title="Disney group discounts">Group Travel Plans</h2>
+    <h3>Specialists That Are Experts In Group Travel.</h3>
+  </div>
+</div>
+<div class="section dark">
+<div class="item">
+    <div class="img img-first" [ngStyle]="{backgroundImage: 'url('+ img1 +')'}" title="Disney family plans"></div>
+    <div class="card" title="Disney family packages">
+        <h3 title="Disney family vacation planner">Group Plans</h3>
+        <p>Looking to travel with family or friends?</p>
+        <!-- <a href="#">Learn more</a> -->
+    </div>
+</div>
+</div>
+<div class="parallax-image3 sticky" [ngStyle]="{backgroundImage: 'url('+ parallaxImage3 +')'}" title="Disney Cruises">
+</div>
+<div class="section-header" title="Disney Cruise vacation">
+  <div class="header-text" title="Disney cruise getaway">
+    <h3 title="Disney cruise family vacation">Disney Cruise</h3>
+    <p>Hit The Open Seas On A Disney Cruise Ship!</p>
+  </div>
+</div>
+<div class="section" [ngStyle]="{backgroundImage: 'url('+ disneyWish +')'}" title="Disney cruise Carribean vacation">
+    <div class="item" title="Disney">
+        <div class="img img-third" [ngStyle]="{backgroundImage: 'url('+ img3 +')'}" title="Disney cruise best ship"></div>
+        <div class="card" title="Disney cruise planner">
+            <h3>Disney Cruises</h3>
+            <p>A Different Kind of Adventure!!</p>
+            <!-- <a href="#">Learn more</a> -->
+        </div>
+    </div>
+</div>
+<div class="parallax-image4 sticky" [ngStyle]="{backgroundImage: 'url('+ parallaxImage4 +')'}" title="Disney Galaxy's Edge vacation packages">
+</div>
+<div class="section-header2" title="Galaxy's Edge travel deals">
+  <div class="header-text2" title="Star Wars Disney trip planning">
+    <h2 [ngStyle]="{color: tabColor}">Galaxy's Edge</h2>
+    <h3 [ngStyle]="{color: tabColor}">{{tabText}}</h3>
+  </div>
+</div>
+<div class="section dark" title="Disney park VIP experiences Galaxy's Edge">
+  <section [ngStyle]="{backgroundColor: styleBackground, color: textColor}" title="Galaxy's Edge tips and tricks">
+    <h2 title="Star Wars vacation">No Matter if you choose the Light Side</h2>
+    <!-- <mat-icon>wb_sunny</mat-icon> -->
+    <mat-slide-toggle color="sith" (click)="onToggle()" title="Are you light side or dark side?"></mat-slide-toggle>
+    <!-- <mat-icon>dark_mode</mat-icon> -->
+    <h2 >Or the Dark Side</h2>
+    <h2>It Will Be An Unforgettable Experience!!</h2>
+  </section>
+    <br><br><br>
+    <div class="item" [ngStyle]="{backgroundColor: cardBackground}" title="Galaxy's Edge dining reservations">
+      <div class="img img-third" [ngStyle]="{backgroundImage: 'url('+ img4 +')', }" title="Galaxy's Edge character meet and greets"></div>
+      <div class="card" [ngStyle]="{backgroundColor: styleBackground}" title="Galaxy's Edge Kylo Ren">
+        <h3 [ngStyle]="{color: textColor}">Star Wars: Galaxy's Edge</h3>
+        <p [ngStyle]="{color: textColor}">{{cardText}}</p>
+        <!-- <a href="#">Learn more</a> -->
+      </div>
+    </div>
+</div>
+<div class="section dark" title="Disney travel planner">
+<h2 style="color: #FF4081">On The Morrow Travels</h2>
+<h3 style="color: #FF4081">Embark on Unforgettable Journeys with On The Morrow Travel - Where Every Trip Is a Treasure.</h3>
+<div style="text-align: center;">
+  <h3 style="color: #58c3e0;">
+    <a href="tel:8179147119">Call</a> now to book your Disney Dream vacation!!
+  </h3>
+  <h3 style="color: #58c3e0;">
+    Or click the button at the bottom of your screen to schedule a live call.
+  </h3>
+  <h3 style="color: #58c3e0;">
+    Don't feel like talking on the phone, shoot us a <a
+      href="sms:8179147119&body=Hi Gennie.  Can you tell me more about the Disney Cruise Lines Packages?">Text</a>,
+    or <a
+      href="mailto:jeremy@thefriese.com? &subject=Interested%20In%20The%20Disney%20Cruise%20Lines%20Packages&body=Hi%20Gennie,%0D%0A%0D%0A%0D%0AI%20would%20like%20more%20info%20on%20Disney%20Cruise%20Lines%20Packages">
+      Email</a>.
+  </h3>
+</div>
+</div>
+<app-footer></app-footer>

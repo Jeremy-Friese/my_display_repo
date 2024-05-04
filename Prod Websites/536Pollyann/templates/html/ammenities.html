@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+{% load static %}
+<html lang="en">
+<head>
+  <meta name="description" content="Beautiful home for sale in Haslet, Texas" />
+  <meta name="keywords" content="House for sale, house for sale fort worth, beautiful house for sale, house for sale 76052, house for sale 76052, 76052, haslet, fort worth"/>
+  <meta property="og:title" content="536 Pollyann Trail" />
+  <meta property="og:url" content="http://536Pollyann.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{%static "pdl23tp.jpg" %}" />
+      {% block body_block %}
+      <title>536 Pollyann Trail</title>
+      <link href="{% static "house.ico" %}" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{% static "am.css" %}">
+      <div class="jumbotron">
+    <div class="container">
+      <br>
+      <h1 style="color:blue">Sendera Ranch Ammenities</h1>
+      <p>Sendera Ranch currently features an amenity center complex including a large pool with beach-style entrance, a spray park for kids, covered gazebo with picnic tables and barbecue grills, cabana with restrooms and baby changing stations, a basketball half-court, playground, roller hockey rink, sports field, and a scenic lake with waterfall and spacious walkway. The Sendera Ranch development will also feature, additional amenity centers, miles of paved hiking and biking trails and over 200 acres of lush greenbelts, ball fields, parks, and playgrounds</p>
+      <br>
+      <p>Conveniently located in the Alliance Corridor, Sendera Ranch also offers families the attraction of sending their children to Northwest I.S.D. schools – including Two elementary schools and One middle school located within the community.
+      </p>
+  </div>
+  </div>
+  {% endblock %}
+</html>

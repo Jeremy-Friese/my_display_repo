@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="button-menu" mat-icon-button (click)="toggleButtonMenu()">
+    <mat-icon style="color: #FF4081; font-weight: bolder; background-color: #58c3e0;"
+      class="material-icons">{{buttonMenuOpen ? "close" : "dashboard"}}</mat-icon>
+    <b color="darkred" style="text-align: right; padding-left: 30%;">On The Morrow Travels</b>
+  </div>
+
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container" autosize color="primary">
+  <mat-sidenav #sidenav class="main-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
+    (mouseleave)="mouseleave()" animationDuration="500" *ngIf="!mobile">
+    <mat-nav-list [ngClass]="{submenu1}">
+      <mat-list-item>
+        <span class="full-width" *ngIf="isExpanded || isShowing"></span>
+        <a routerLink=""><mat-icon mat-list-icon color="accent" class="menu-button1" *ngIf="!mobile">dashboard</mat-icon></a>
+      </mat-list-item>
+
+      <div class="submenu" ngClass="submenu1" *ngIf="isShowing || isExpanded">
+        <a mat-list-item routerLink=""><mat-icon>flight</mat-icon> Home</a>
+        <!-- <a mat-list-item routerLink=""><mat-icon>on_device_training</mat-icon>Travel Deals</a> -->
+        <!-- <a mat-list-item routerLink="wcc"><mat-icon>sports_martial_arts</mat-icon>WCC</a> -->
+        <mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent">
+          <span class="full-width" *ngIf="isExpanded || isShowing">Special Packages</span>
+          <mat-icon class="menu-button" (click)="toggleMenu()" [ngClass]="{'rotated' : showSubSubMenu}">{{isMenuOpen ?
+            "expand_more" : "expand_more"}}</mat-icon>
+        </mat-list-item>
+        <div class="submenu" [class.is-open]="isMenuOpen" n *ngIf="showSubSubMenu">
+          <a mat-list-item routerLink="disney">Disney Parks</a>
+          <a mat-list-item routerLink="disney-cruise">Disney Cruises</a>
+          <!-- <mat-list-item>SubSubmenu Item 2</mat-list-item> -->
+        </div>
+      </div>
+    </mat-nav-list>
+    <mat-nav-list>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div style="background-color: #fffde7;">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

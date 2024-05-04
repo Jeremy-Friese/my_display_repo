@@ -1,0 +1,33 @@
+{% load staticfiles %}
+{% load webp %}
+<footer>
+    <div class="footer" id="footer">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <img id="footerLogo" src="{%  webp "Lawn-Care-Wesley-Chapel.png" %}">
+
+                    <h3 style="text-align: center;"> Contact </h3>
+                    <ul style="text-align: center;">
+                        <li><a href="tel:+1-813-681-1640">813-681-1640</a></li>
+                        <br/>
+                        <li><a href="mailto:mwhite@myfourseasonslawn.com?Subject=New20%Services">mwhite@myfourseasonslawn.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-2 col-xs-3" style="text-align: center;">
+                    <ul>
+                        <li> <h5> <a href="{% url "about"  %}"> ABOUT US</a> <h5></li>
+                        <li> <h5><a href="{% url "services"  %}"> OUR SERVICES </a> <h5></li>
+                        <!--<li> <h5><a href="#"> BOOK A CONSULTATION </a> <h5></li>
+                        <li> <h5><a href="#"> WHY US </a> <h5></li>-->
+                    </ul>
+                    <a  href="{% url "terms"  %}">Terms and Conditions  |  </a>
+                    <a href="{% url "privacy"  %}">Privacy Policy</a>
+                </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left copyright"> Copyright © Four Seasons Lawn Care 2020. All right reserved. </p>
+
+        </div>
+    </div>
+</footer>

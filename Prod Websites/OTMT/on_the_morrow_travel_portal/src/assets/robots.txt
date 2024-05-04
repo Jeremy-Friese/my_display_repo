@@ -1,0 +1,7 @@
+User-agetn: Googlebot
+
+User-agent: *
+Allow: /
+
+Sitemap: https://otmtravels.com/sitemap.xml
+Sitemap: https://onthemorrowtravels.com/sitemap.xml

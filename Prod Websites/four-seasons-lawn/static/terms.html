@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+{% load static %}
+      {% block body_block %}
+      <link rel="stylesheet" type="text/css" href="{% static "terms.css" %}">
+      <br>
+      <br>
+      <br>
+      <br>
+<div class="containerII">
+  <div class="legal">
+<h3 class="s-component-content s-font-heading">
+                <p style="text-align: left;"><strong>Terms & Conditions</strong></p>
+                <p style="text-align: left; font-size: 60%;">The following terms and conditions apply to all visitors of the Four Seasons website (the “Site”), the homepage of which is at www.myfourseasonslawncare.com. By accessing the Site, you acknowledge and agree to be bound by these Site Use Terms. Four Seasons Lawn Care reserves the right to modify these Site Use Terms at any time and at its sole discretion. In the event of a violation of these terms and conditions, Four Seasons Lawn Care reserves the right to seek all remedies available by law and in equity. In addition, Four Seasons Lawn Care reserves the right to block or deny access to the Site to anyone at any time for any reason. Four Seasons Lawn Care may terminate, suspend or discontinue any aspect of the Site at any time and without notice or liability.</p>
+                <p style="text-align: left;"> </p>
+                <p style="text-align: left;"><strong>Limited License</strong></p>
+                <p style="text-align: left; font-size: 60%;">The Site and all it materials, including, but not limited to, its software or HTML code, scripts, text, artwork, photography, images, video, and audio (collectively, “Materials”) are protected by copyright laws and other United States and international laws and treaties. All Materials are provided as a service to our current and prospective Site users and customers and the materials may be used only for your non-commercial purposes and only if you also retain all copyright and other proprietary notices contained on the Materials. Nothing contained herein shall be construed as conferring right, title or interest in Materials. This is a limited license, not a transfer of title to Materials, subject to the following restrictions: (a) you may not copy, publish, distribute, perform, display, post, modify, create derivative works from, sell, license or otherwise exploit the Site or any of its Materials without the prior written permission of Four Seasons Lawn Care; (b) you may not access or use the Site for any competitive commercial purpose; and (c) you will not permit any copying of Materials. Any unauthorized copying, alteration, distribution, transmission, performance or display of the Materials is prohibited. Four Seasons Lawn Care may revoke this limited license at any time for any or no reason. All rights not expressly granted are reserved by Four Seasons Lawn Care</p>
+                <p style="text-align: left;"> </p>
+                <p style="text-align: left;"><strong>Trademarks</strong></p>
+                <p style="text-align: left; font-size: 60%;">All trademarks, trade names, brand names, logos and images, service marks and trade dress displayed on the Site (collectively, “Marks”) are the property of Four Seasons Lawn Care or other third parties. Four Seasons Lawn Care and its affiliated companies retain all rights regarding their Marks. Nothing contained herein shall be construed as conferring any license to the use of such Marks. You are not permitted to use any Marks included on the Site without the prior written consent of Four Seasons Lawn Care or other third party that own the Marks.</p>
+                <p style="text-align: left;"> </p>
+                <p style="text-align: left;"><strong>Special Notice</strong></p>
+                <p style="text-align: left; font-size: 60%;">The use of the Site address, Four Seasons Lawn Care trademarks or names in metatag keywords is trademark infringement, and the use of trademarks or names in page text, metatags, and/or hidden text for purposes of gaining higher ranking from search engines is unfair competition. Framing, inline linking or other means of association of the Site or its Materials with any other site, advertisement, link or other information or materials not originating from the Site is expressly prohibited.</p>
+                <p style="text-align: left;"> </p><p style="text-align: left;"><strong>Privacy</strong></p>
+                <p style="text-align: left; font-size: 60%;">Four Seasons Lawn Care's disclosure and use of personal information you provide when using the Site or features on the Site are described in our Privacy Policy.</p>
+                <p style="text-align: left;"> </p><p style="text-align: left;"><strong>Limitation of Liability</strong></p>
+                <p style="text-align: left; font-size: 60%;">Four Seasons Lawn Care SHALL NOT BE LIABLE TO ANY PARTY FOR ANY DAMAGES (WHETHER DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR OTHERWISE) ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OF OR INABILITY TO USE OUR WEB SITE OR FOR ANY INFORMATION, SOFTWARE, PRODUCTS, OR SERVICES OBTAINED THROUGH OR OTHERWISE IN CONNECTION WITH THE SITE, REGARDLESS OF WHETHER SUCH DAMAGES ARE BASED ON CONTRACT, TORT, STRICT LIABILITY OR OTHER THEORIES OF LIABILITY. In some jurisdiction, limitations of liability are not permitted. Where applicable the foregoing limitation on liability may not apply to you.</p>
+                <p style="text-align: left;"> </p><p style="text-align: left;"><strong>Disclaimer of Warranty</strong></p>
+                <p style="text-align: left; font-size: 60%;">The Site and related services and features are provided to users “AS IS” and “AS AVAILABLE” and without warranty of any kind, whether express or implied, INCLUDING BUT NOT LIMITED TO, THOSE OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-INFRINGEMENT. Some jurisdictions do not allow the disclaimer of implied warranties. In such jurisdictions, the foregoing disclaimer may not apply to you. YOU HEREBY AGREE THAT USE OF THE WEBSITE AND RELATED SERVICES IS AT YOUR OWN RISK.</p><p style="text-align: left;"> </p><p style="text-align: left;"><strong>Jurisdiction</strong></p>
+                <p style="text-align: left; font-size: 60%;">Four Seasons Lawn Care operates the Site from its offices within the State of Florida. Four Seasons Lawn Care does not imply that the content published on the Site is legal for use outside the United States. If the Site is accessed outside the United States, you hereby acknowledge doing so on your own initiative, and are responsible for compliance with local laws. Four Seasons Lawn Care makes no representations as to the compliance of the Site or its Site Use Terms with any applicable law. The Site Use Terms of the Site shall be governed by the laws of the State of Florida, without giving effect to its conflict of laws provisions. By accessing the Site you agree to submit to the jurisdiction of the State of Florida and agree that it shall serve as the exclusive venue for any disputes relating to the Site. Copyright Agent</p><p style="text-align: left; font-size: 80%;"> </p><p style="text-align: left; font-size: 80%;"> </p>
+                <p style="text-align: left;"><strong>Modifications to Site Use Terms and Website</strong></p>
+                <p style="text-align: left; font-size: 60%;">Four Seasons Lawn Care may make changes or modifications to the Site or to any of the terms and conditions, disclaimers and other documents referenced herein. In addition, Four Seasons Lawn Care may add or remove any portion of the Site, including any portion of these Site Use Terms , at any time, in its sole discretion and without notice. All changes to these Site Use Terms shall take effect upon posting. The most current version of the Site Use Terms will supersede all previous versions. You should review these Site Use Terms before each use of the Site, as your use of the Site following any changes to these Site Use Terms shall constitute your acceptance of the then posted Site Use Terms.</p>
+              </h3>
+            </div>
+          </div>
+
+                {% if request.user_agent.is_mobile %}
+                    <div style="height: 30%;">
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="{% static "footerMobile.css" %}">
+                    {% include "tfooterMobile.html" %}
+                {% elif request.user_agent.is_pc %}
+                    <link rel="stylesheet" type="text/css" href="{% static "footerPC.css" %}">
+                    {% include "tfooterPC.html" %}
+                {% endif %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{%static "parallax.js" %}"></script>
+  <script src="{%static "bootstrap.js" %}"></script>
+  {% endblock %}

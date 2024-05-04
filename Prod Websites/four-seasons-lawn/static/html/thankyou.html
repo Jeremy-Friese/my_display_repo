@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+{% load static %}
+      {% block body_block %}
+      <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+      <staticContent>
+        <mimeMap fileExtension=".woff" mimeType="{% static "glyphicons-halflings-regular.woff2" %}" />
+        <mimeMap fileExtension=".woff" mimeType="{% static "glyphicons-halflings-regular.woff" %}" />
+        <mimeMap fileExtension=".woff" mimeType="{% static "glyphicons-halflings-regular.ttf" %}" />
+      </staticContent>
+          <div class="parallax-window" data-parallax="scroll" data-image-src="{% static "fourseasons-lawn-Care.jpeg" %}">
+            <br><br>
+        <div style="text-align:center;">
+            <h1 style="color:white;">Four Seasons Lawn Care</h1>
+            <h1 style="color:white;">Thank You.  We Will Be In Contact Shortly</h1>
+            <h4 style="color:#FFB600;">FERTILIZATION | PEST CONTROL | TREE & SHRUB CARE</h4>
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="column">
+            <img id="FourSeasonsPic" src="{% static "Lawn-Care-Wesley-Chapel.png" %}">
+          </div>
+          <div class="column">
+            <div class="embed-responsive embed-responsive-16by9 mb-4">
+             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/frqJRyoV-cw"
+               allowfullscreen></iframe>
+             </div>
+          </div>
+        </div>
+      <div style="text-align: center;">
+         <a href="#contact"><h5 style="color:yellow;">Get A Free Quote Today</h5></a>
+      <!--<div id="Email">
+        <p id="screenText" style="color:white;">SIGN UP FOR EMAILS AND SPECIALS</p>
+        <form action="newCustomer">
+          <input class="textSyler" name="Email" placeholder="Email" value="Email" onfocus="javascript:this.value=''" onblur="javascript:if(this.value.length === 0){this.value='Email'}"/>
+          <input type="text" class="textSyler" name="Name" placeholder="Name" value="Name" onfocus="javascript:this.value=''" onblur="javascript:if(this.value.length === 0){this.value='Name'}"/>
+        <input class="textSyler" type="submit" value="Yes! Send me Money Saving Deals!!">
+      </form>
+    </div>-->
+</div>
+    <div id="welcome">
+          <br>
+          <br>
+          <br>
+            <p id="screenText">We Put the CARE back in Lawn Care</p>
+              <br/>
+                <p id="screenText">Call Now To Get a Healthy, Great-Looking Lawn</p>
+                <br/>
+                  <a href="tel:+1-813-681-1640"><p id="phoneNumber"><u>813-681-1640<u></p></a>
+
+          <br>
+          <br>
+          <button type="button"><a href="#contact">Get A Free Consultation</button></a>
+          <br>
+          <br>
+          <br>
+          <br>
+
+    </div>
+    <div style="text-align:center; width: 100%; height: 100%;" class="parallax-window" data-parallax="scroll" data-image-src="{% static "Lawn-Green.jpg" %}">
+      <br>
+        <div class="container">
+          <div id="header">
+          <p><font size="18"color="#FFB600;">Four Seasons Lawn Care</font></p>
+        </div>
+        </div>
+
+
+<!--Carousel-->
+
+{% if request.user_agent.is_mobile %}
+  {% include "carouselMobile.html" %}
+  {% elif request.user_agent.is_pc %}
+  {% include "carouselPC.html" %}
+  {% endif %}
+
+
+{% if request.user_agent.is_mobile %}
+    <link rel="stylesheet" type="text/css" href="{% static "footerMobile.css" %}">
+    {% include "footerMobile.html" %}
+{% elif request.user_agent.is_pc %}
+    <link rel="stylesheet" type="text/css" href="{% static "footerPC.css" %}">
+    {% include "footerPC.html" %}
+{% endif %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{%static "parallax.js" %}"></script>
+  <script src="{%static "bootstrap.js" %}"></script>
+  {% endblock %}

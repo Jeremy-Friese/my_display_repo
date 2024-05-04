@@ -1,0 +1,35 @@
+.object-tools a.turned-on,
+.object-tools a.turned-off {
+    padding-right: 26px;
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+}
+
+.object-tools a.turned-on {
+    background-image: url('../img/icon-turned-on.svg');
+}
+
+.object-tools a.turned-off {
+    background-image: url('../img/icon-turned-off.svg');
+}
+
+#result_list .row1:hover,
+#result_list .row2:hover {
+    background-color: #ffc;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: auto !important;
+    display:none;
+    border: none;
+    margin: 0;
+    z-index: 999;
+}
+
+.chart {
+    height: 50px;
+    margin: 0.5rem 0 0.75rem 0;
+    z-index: 999;
+}

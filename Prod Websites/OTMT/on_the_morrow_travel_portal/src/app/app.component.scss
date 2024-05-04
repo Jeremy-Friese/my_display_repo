@@ -1,0 +1,74 @@
+$menuBreakpoint: 605px;
+$menuHeight: 50px;
+
+body {
+    z-index: 0;
+}
+
+.toolbar {
+    display: none;
+    z-index:12;
+}
+
+.button-menu {
+    padding-top: 15px;
+}
+
+@media screen and (max-width: $menuBreakpoint) {
+    .toolbar {
+        display: contents;
+        color: #FF4081;
+        font-weight: bold;
+        background-color: #58c3e0;
+    }
+    .menu-button1 {
+        display: none;
+    }
+}
+
+.toolbar {
+    @media (max-width: $menuBreakpoint) {
+        display: block;
+    }
+}
+
+.sidenav-container {
+    height: 100vh;
+    z-index: 2;
+}
+
+
+.main-sidenav {
+    user-select: none;
+    background-color: #58c3e0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.menu-button {
+    transition: 1600ms ease-in-out;
+    transform: rotate(0deg);
+}
+
+.menu-button.rotated {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    // overflow-y: hidden;
+    transition: transform 1300ms ease;
+    // transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+}
+
+.submenu.expanded {
+    transform: scaleY(1);
+}
+
+
+.mat-icon {
+    color: #FF4081
+}

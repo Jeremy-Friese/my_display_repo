@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+{% load static %}
+{% load webp %}
+      {% block body_block %}
+      <style>
+      ul li{
+       font-size: 200%;
+      }
+      </style>
+      <link rel="stylesheet" type="text/css" href="{% static "services.css" %}">
+      <br><br>
+          <div style="height:100%; text-align: center;" class="parallax-window" data-parallax="scroll" data-image-src="{% webp "fourseasonslawn.jpeg" %}">
+            <img id="FourSeasonsPic" src="{%  webp "Lawn-Care-Wesley-Chapel.png" %}">
+            <h2 style="color:#FFB600;">Our Services</h2>
+          </div>
+
+
+          <div style="text-align:center; width: 100%; height: 200%; color:white;" class="parallax-window" data-parallax="scroll" data-image-src="{%  webp "Lawn-Green.jpg" %}">
+            <h2 style="color:#FFB600;">We Offer</h2>
+            <img style="width:95%;" src="{%  webp "fertilization.jpg" %}">
+            <p style="font-size: 200%;">Four Seasons Lawn Care monitors precise levels of nutrients using a combination of
+              granular and liquid applications to maintain optimum health and prevent widespread damage.
+              Our treatment programs include:</p>
+            <p><strong style="font-size: 200%;">Four Seasons Customized Plan for Year-Round Protection</p></strong>
+            <p style="font-size: 150%;">Weed Control I Nutrient Boost I Color Enhancement I Root Stimulation</p>
+            <p style="font-size: 150%;">Summer Recovery | Fall Prep | Winter Stress Recovery</p>
+            <p><strong style="font-size: 200%;">Healthy Tree & Shrub Plan</p></strong>
+            <p style="font-size: 150%;">Spring Feeding I Early Growth Protection I Target Plant Protection I Mid-Season Foliage Protection</p>
+            <p style="font-size: 150%;">Late Season Foliage Protection I Root Zone Fertilization I Overwintering Insect Control</p>
+            <p><strong style="font-size: 150%;">Specialized Services</p></strong>
+            <p style="font-size: 150%;">Soil Amendment (Lime) I Soil Amendment (Sulfur) I Fungicide I Aeration</p>
+
+            <p style="font-size: 150%;">Aeration & Overseed I Slit-Seed/Renovate I Nuisance Pest Control I Flea & Tick Control</p>
+
+            <P style="font-size: 150%;">Fire Ant Control I Grub Treatment I Chinch Bug Control</P>
+          </div>
+
+        <div class="pest">
+          <img style="float: left;" src="{%  webp "infestation.jpg" %}">
+          <div style="text-align: center;" class="img_text">
+            <h2>Pest Control</h2>
+            {% if request.user_agent.is_mobile %}
+                  <style>
+                  .pest img {
+                    float: left;
+                    width: 50%;
+                    padding-left: 15px;
+                    padding-top: 20px;
+                  }
+                  </style>
+              {% elif request.user_agent.is_pc %}
+                <style>
+                .pest img {
+                  float: left;
+                  width: 45%;
+                  padding-left: 200px;
+                  padding-top: 20px;
+                }
+                </style>
+              {% endif %}
+            <p style="font-size: 150%;">Our lawn and shrub pest services are designed to prevent infestations
+              that are common to Florida. We eradicate pests that may harm your yard, including:</p>
+            <div>
+            <ul>
+              <li>Chinch bugs</li>
+              <li>Grubs</li>
+              <li>Sod webworms</li>
+              <li>White flies</li>
+              <li>Mole crickets</li>
+              <li>Mites</li>
+              <li>Fire ants</li>
+              <li>And more</li>
+            </ul>
+          </div>
+          </div>
+        <div class="tree_care">
+          <br>
+          <br>
+          <br>
+          <img style="float: right;" src="{%  webp "palm-care.jpg" %}">
+          <p style="font-size: 300%;">Tree & Shrub Care</p>
+          <br>
+          <p style="font-size: 200%;">Receive expert advice on the condition of your favorite trees,</p>
+            <p style="font-size: 200%;">shrubs and palms and we’ll customize a treatment plan to keep you enjoying them for years to come.</p>
+        </div>
+        </div>
+  {% if request.user_agent.is_mobile %}
+        <style>
+          .facebook {
+            text-align: center;
+            padding-top: 200px;
+          }
+          .facebook img {
+            display: block;
+            margin: 0 auto;
+          }
+        </style>
+        <div class="facebook">
+          <a href="https://www.facebook.com/WesleyChapelLawnCare" target="_blank"><img style="width:15%;" src="{%  webp "facebook.png" %}"></a>
+          <a href="https://www.facebook.com/WesleyChapelLawnCare" target="_blank">Like us on Facebook</a>
+        </div>
+      <link rel="stylesheet" type="text/css" href="{% static "footerMobile.css" %}">
+      {% include "footerMobile.html" %}
+  {% elif request.user_agent.is_pc %}
+      <link rel="stylesheet" type="text/css" href="{% static "footerPC.css" %}">
+      {% include "footerPC.html" %}
+  {% endif %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{%static "parallax.js" %}"></script>
+  <script src="{%static "bootstrap.js" %}"></script>
+  {% endblock %}
